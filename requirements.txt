@@ -21,6 +21,7 @@ python-dateutil==2.9.0.post0
 python-magic==0.4.27
 python-slugify==8.0.4
 python-sql==1.5.1
+python-stdnum==1.20
 PyYAML==6.0.2
 relatorio==0.10.2
 requests==2.32.3
