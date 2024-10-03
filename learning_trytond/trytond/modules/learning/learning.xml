@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<tryton>
+    <data>
+        <!--1. Menus -->
+        <menuitem id="menu_learning_parent" name="Supermodulo" sequence="100" icon="tryton-archive" />
+        <menuitem id="menu_learning_invoice" parent="menu_learning_parent" action="act_learning_invoice" sequence="10" />
+
+        <!--2. Actions / Actions View -->
+        <record model="ir.action.act_window" id="act_learning_invoice">
+            <field name="name">Invoice</field>
+            <field name="res_model">learning.invoice</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_learning_invoice_view_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="learning_invoice_view_tree" />
+            <field name="act_window" ref="act_learning_invoice" />
+        </record>
+
+        <!--3. Declare tree/form view for invoice model-->
+        <record model="ir.ui.view" id="learning_invoice_view_tree">
+            <field name="model">learning.invoice</field>
+            <field name="type">tree</field>
+            <field name="name">invoice_view_tree</field>
+        </record>
+    </data>
+</tryton>
